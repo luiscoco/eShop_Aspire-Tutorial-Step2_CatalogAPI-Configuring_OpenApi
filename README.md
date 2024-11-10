@@ -1,4 +1,10 @@
-# Building 'eShop' from Zero to Hero: Configuring CatalogAPI OpenAPI documentation
+# Building 'eShop' from Zero to Hero: Configuring OpenAPI and Swagger for Multi-Version API Documentation (Aspire .NET 9)
+
+In this sample we configure the **CatalogAPI project** to support versioned API documentation using **Swagger** and **OpenAPI** standards
+
+This setup provides a scalable solution **for managing API versions**, making it easier for developers to work with different versions of the CatalogAPI
+
+![image](https://github.com/user-attachments/assets/f16d5db5-a63d-498a-a727-34bbc8b23c48)
 
 ## 1. Load Nuget packages in "eShop.ServiceDefaults" project
 
