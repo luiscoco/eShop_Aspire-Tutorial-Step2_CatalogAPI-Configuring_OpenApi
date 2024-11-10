@@ -6,6 +6,10 @@ This setup provides a scalable solution **for managing API versions**, making it
 
 ![image](https://github.com/user-attachments/assets/f16d5db5-a63d-498a-a727-34bbc8b23c48)
 
+**IMPORTANT NOTE**: To Start developing this sample please download the code in this link: 
+
+https://github.com/luiscoco/eShop_Aspire-Tutorial-Step1_CatalogAPI
+
 ## 1. Load Nuget packages in "eShop.ServiceDefaults" project
 
 ### 1.1. Asp.Versioning.Mvc.ApiExplorer
