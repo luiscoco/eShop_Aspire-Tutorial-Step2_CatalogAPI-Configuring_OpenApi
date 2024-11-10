@@ -414,8 +414,23 @@ app.UseDefaultOpenApi();
 app.Run();
 ```
 
+## 6. Modify the CatalogApi.cs file 
 
-## 6. 
+We replace this code: 
+
+```csharp
+var api = app.MapGroup("api/catalog");
+```
+
+with this new code including the ApiVersion:
+
+```csharp
+var api = app.MapGroup("api/catalog").HasApiVersion(1.0);
+```
+
+
+
+
 
 
 
