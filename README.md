@@ -322,22 +322,42 @@ internal static class OpenApiOptionsExtensions
 
 This code snippet is setting up **API versioning** and **OpenAPI (Swagger)** integration in an ASP.NET Core application
 
-By calling **AddApiVersioning**, you enable support for versioning your API endpoints
-
-**AddDefaultOpenApi** is a method provided by some **OpenAPI/Swagger** integration packages, and it configures **OpenAPI** generation and documentation for the application
-
 ```csharp
 var withApiVersioning = builder.Services.AddApiVersioning();
 builder.AddDefaultOpenApi(withApiVersioning);
 ```
 
-We also have to include this code:
+By calling **AddApiVersioning**, you enable support for versioning your API endpoints
+
+**AddDefaultOpenApi** is a method provided by some **OpenAPI/Swagger** integration packages, and it configures **OpenAPI** generation and documentation for the application
+
+This code is configuring a versioned API named "Catalog" and setting up documentation for it using OpenAPI
+
+This code helps in organizing **API versions** and making the **API self-documenting** for easier maintenance and usability
 
 ```csharp
 app.NewVersionedApi("Catalog")
    .MapCatalogApiV1();
 app.UseDefaultOpenApi();
 ```
+
+**app.NewVersionedApi("Catalog")**: This line sets up a new API versioning scheme for a "Catalog" API
+
+The **NewVersionedApi** method creates a new versioned API group called "Catalog", which allows you to manage multiple versions of this API (e.g., v1, v2) under the same logical name
+
+This can help organize and structure different versions of endpoints within the "Catalog" API group
+
+**.MapCatalogApiV1()**: This line maps specific routes or endpoints for the version 1 (v1) of the Catalog API
+
+MapCatalogApiV1() is probably a custom method that sets up the routes/endpoints for version 1 of the Catalog API
+
+For example, it could define routes like /api/v1/catalog for accessing resources within this version of the Catalog API
+
+**app.UseDefaultOpenApi()**: This line adds support for OpenAPI (formerly known as Swagger) documentation in the application
+
+By calling UseDefaultOpenApi, the application generates an OpenAPI specification (typically accessible via /swagger or /api/docs), providing a user-friendly way to view, test, and document the API's endpoints and operations
+
+This makes it easier for developers and users to understand the API structure and how to interact with it
 
 This is the whole **Program.cs** file
 
