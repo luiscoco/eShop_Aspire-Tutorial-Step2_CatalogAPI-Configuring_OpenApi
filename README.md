@@ -2,15 +2,17 @@
 
 ## 1. Load Nuget packages in "eShop.ServiceDefaults" project
 
-Asp.Versioning.Mvc.ApiExplorer
+**Asp.Versioning.Mvc.ApiExplorer**
 
-Microsoft.AspNetCore.Open.Api
+**Microsoft.AspNetCore.Open.Api**
 
-Scalar.AspNetCore
+**Scalar.AspNetCore**
 
+![image](https://github.com/user-attachments/assets/ff7cb645-65a4-47d7-b6d7-b927a7a23f35)
 
 ## 2. Create "ConfigurationExtensions.cs" file in "eShop.ServiceDefaults" project
 
+![image](https://github.com/user-attachments/assets/5a1aae02-6e36-43aa-ad56-ae19e6f2f061)
 
 ```csharp
 namespace Microsoft.Extensions.Configuration;
