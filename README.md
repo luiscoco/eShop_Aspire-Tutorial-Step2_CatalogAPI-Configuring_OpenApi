@@ -10,7 +10,7 @@
 
 **Use Case**: Useful when you want to manage and document multiple versions of your API endpoints and support versioned API documentation in tools like Swagger
 
-### 1.2. Microsoft.AspNetCore.Open.Api
+### 1.2. Microsoft.AspNetCore.OpenApi
 
 **Purpose**: This package provides support for **OpenAPI** (formerly known as **Swagger**) in ASP.NET Core applications
 
