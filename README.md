@@ -36,6 +36,10 @@ Scalar.AspNetCore is likely an ASP.NET Core integration for managing interaction
 
 ![image](https://github.com/user-attachments/assets/5a1aae02-6e36-43aa-ad56-ae19e6f2f061)
 
+This code defines a static method **GetRequiredValue** within the **ConfigurationExtensions** class, which is part of the **Microsoft.Extensions.Configuration namespace**
+
+The purpose of this method is to retrieve a required configuration value from an **IConfiguration** object, which is commonly used in .NET applications for accessing application settings
+
 ```csharp
 namespace Microsoft.Extensions.Configuration;
 
@@ -45,9 +49,6 @@ public static class ConfigurationExtensions
         configuration[name] ?? throw new InvalidOperationException($"Configuration missing value for: {(configuration is IConfigurationSection s ? s.Path + ":" + name : name)}");
 }
 ```
-
-
-
 
 ## 3. Create "OpenApi.Extensions.cs" file in "eShop.ServiceDefaults" project
 
