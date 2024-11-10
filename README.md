@@ -142,10 +142,13 @@ public static partial class Extensions
 }
 ```
 
-
-
 ## 4. Create "OpenApi.OptionsExtensions.cs" file in "eShop.ServiceDefaults" project
 
+This code defines extensions for **OpenApiOptions** to help **configure API documentation** for an ASP.NET Core application using **OpenAPI (Swagger)**
+
+These extensions **customize** the **OpenAPI documentation** to display versioning, authorization, and security details
+
+This **setup** allows the **OpenAPI documentation** to display comprehensive API information, including versioning, deprecation notices, security requirements, and OAuth2-based authorization, enhancing API documentation and client integrations
 
 ```csharp
 using System.Text;
@@ -345,7 +348,6 @@ internal static class OpenApiOptionsExtensions
 }
 ```
 
-
 ## 5. Modify the "Pogram.cs" file in "Catalog.API" project 
 
 This code snippet is setting up **API versioning** and **OpenAPI (Swagger)** integration in an ASP.NET Core application
@@ -414,7 +416,7 @@ app.UseDefaultOpenApi();
 app.Run();
 ```
 
-## 6. Modify the CatalogApi.cs file 
+## 6. Modify the CatalogApi.cs file to introduce the API version
 
 We replace this code: 
 
@@ -427,6 +429,10 @@ with this new code including the ApiVersion:
 ```csharp
 var api = app.MapGroup("api/catalog").HasApiVersion(1.0);
 ```
+
+## 7. Run the application and verify the results
+
+
 
 
 
