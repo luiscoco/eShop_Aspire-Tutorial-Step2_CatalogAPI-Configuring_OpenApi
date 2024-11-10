@@ -52,6 +52,9 @@ public static class ConfigurationExtensions
 
 ## 3. Create "OpenApi.Extensions.cs" file in "eShop.ServiceDefaults" project
 
+This setup provides a **customized OpenAPI** and **API versioning** setup for the application, enabling dynamic configurations, versioning, and conditional development settings for a more flexible API environment
+
+This C# code snippet configures an **OpenAPI setup** for a .NET web application, specifically tailored for use with **API versioning** and an **OpenAPI/Swagger**-like setup
 
 ```csharp
 using Asp.Versioning;
