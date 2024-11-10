@@ -493,8 +493,22 @@ We set the **eShop.AppHost** project as the **StartUp project**
 
 ![image](https://github.com/user-attachments/assets/a3e0619b-3339-4e84-b7fd-e9dedddc0d14)
 
+After running the application we can navigate to the **Dashboard**
 
+https://localhost:17090/
 
+![image](https://github.com/user-attachments/assets/4abc1288-1b60-4f67-b7ef-733aa456b039)
 
+We can also see the API documentation 
 
+https://localhost:7447/scalar/v1
 
+![image](https://github.com/user-attachments/assets/e30bf187-111c-44b1-9356-23d28eb3a12d)
+
+If we select and EndPoint we can send a request
+
+![image](https://github.com/user-attachments/assets/76a99e74-1a7e-47fc-8ce6-27a0370f5e6c)
+
+![image](https://github.com/user-attachments/assets/0b5a1c44-9c5b-40bd-b53c-0f89478c1bd2)
+
+![image](https://github.com/user-attachments/assets/9ddca472-6480-42fd-86ec-b883071351ce)
