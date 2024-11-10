@@ -318,9 +318,49 @@ internal static class OpenApiOptionsExtensions
 ```
 
 
-## 5. 
+## 5. Modify the "Pogram.cs" file in "Catalog.API" project 
 
+We register the OpenAPI service:
 
+```csharp
+var withApiVersioning = builder.Services.AddApiVersioning();
+builder.AddDefaultOpenApi(withApiVersioning);
+```
+
+We also have to include this code:
+
+```csharp
+app.NewVersionedApi("Catalog")
+   .MapCatalogApiV1();
+app.UseDefaultOpenApi();
+```
+
+This is the whole **Program.cs** file
+
+```csharp
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
+
+builder.AddApplicationServices();
+
+builder.Services.AddProblemDetails();
+
+var withApiVersioning = builder.Services.AddApiVersioning();
+
+builder.AddDefaultOpenApi(withApiVersioning);
+
+var app = builder.Build();
+
+app.MapDefaultEndpoints();
+
+app.NewVersionedApi("Catalog")
+   .MapCatalogApiV1();
+
+app.UseDefaultOpenApi();
+app.Run();
+```
 
 
 ## 6. 
