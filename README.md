@@ -320,7 +320,11 @@ internal static class OpenApiOptionsExtensions
 
 ## 5. Modify the "Pogram.cs" file in "Catalog.API" project 
 
-We register the OpenAPI service:
+This code snippet is setting up **API versioning** and **OpenAPI (Swagger)** integration in an ASP.NET Core application
+
+By calling **AddApiVersioning**, you enable support for versioning your API endpoints
+
+**AddDefaultOpenApi** is a method provided by some **OpenAPI/Swagger** integration packages, and it configures **OpenAPI** generation and documentation for the application
 
 ```csharp
 var withApiVersioning = builder.Services.AddApiVersioning();
