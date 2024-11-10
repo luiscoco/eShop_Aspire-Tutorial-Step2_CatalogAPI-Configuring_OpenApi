@@ -2,11 +2,33 @@
 
 ## 1. Load Nuget packages in "eShop.ServiceDefaults" project
 
-**Asp.Versioning.Mvc.ApiExplorer**
+### 1.1. Asp.Versioning.Mvc.ApiExplorer
 
-**Microsoft.AspNetCore.Open.Api**
+**Purpose**: This package is part of the ASP.NET API Versioning project, specifically for applications using MVC (Model-View-Controller) architecture
 
-**Scalar.AspNetCore**
+**Functionality**: It provides tools to expose versioning information of your ASP.NET Core Web APIs through an IApiExplorer implementation, which allows you to generate API documentation for different API versions
+
+**Use Case**: Useful when you want to manage and document multiple versions of your API endpoints and support versioned API documentation in tools like Swagger
+
+### 1.2. Microsoft.AspNetCore.Open.Api
+
+**Purpose**: This package provides support for **OpenAPI** (formerly known as **Swagger**) in ASP.NET Core applications
+
+**Functionality**: It enables integration with the OpenAPI standard, which allows you to describe, produce, and consume RESTful APIs
+
+This package includes various attributes and configuration options to define your API endpoints following OpenAPI specifications
+
+**Use Case**: Essential when building APIs that need to be self-descriptive and documented in a standard format, making it easier for other developers to understand and consume your APIs
+
+### 1.3. Scalar.AspNetCore
+
+**Purpose**: This package is related to the Scalar project, which aims to manage large Git repositories, typically for enterprise solutions
+
+**Functionality**: Scalar itself virtualizes file systems to make large Git repositories more manageable
+
+Scalar.AspNetCore is likely an ASP.NET Core integration for managing interactions or services around Scalar repositories
+
+**Use Case**: Useful for large enterprises dealing with significant Git repositories, aiming to streamline repository management and improve performance by integrating Scalar with ASP.NET Core
 
 ![image](https://github.com/user-attachments/assets/ff7cb645-65a4-47d7-b6d7-b927a7a23f35)
 
