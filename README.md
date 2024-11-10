@@ -438,7 +438,56 @@ with this new code including the ApiVersion:
 var api = app.MapGroup("api/catalog").HasApiVersion(1.0);
 ```
 
-## 8. Run the application and verify the results
+## 8. Modify the appsettings.json file in the Catalog.API project
+
+This code in **appsettings.json** configures **OpenAPI settings** for a microservice API
+
+**"OpenApi"**: This is a configuration section specifically for OpenAPI, a framework used for defining RESTful APIs
+
+OpenAPI definitions help document the API endpoints, methods, parameters, and expected responses, making it easier for developers to understand and interact with the API
+
+**"Endpoint"**:
+
+**"Name": "Catalog.API V1"**: This provides a name for the API endpoint, labeling it as "Catalog.API V1". This might be displayed in documentation tools or developer interfaces that consume this configuration file
+
+**"Document":**
+
+**"Description"**: "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample": This gives a description of the API, explaining that it's a catalog microservice designed as a CRUD (Create, Read, Update, Delete) data-driven service. This text could appear in generated documentation as an overview of the API
+
+**"Title"**: "eShop - Catalog HTTP API": Sets the title of the API, which may appear prominently in documentation tools to identify this API
+
+**"Version"**: "v1": Specifies the version of the API as "v1", indicating that this configuration applies to the first version of the Catalog API
+
+Together, this configuration provides essential **metadata for generating and displaying API documentation using OpenAPI**, particularly useful for tools like Swagge
+
+This setup is helpful for managing API endpoints and facilitating development and integration
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "CatalogDB": "Host=localhost;Database=CatalogDB;Username=postgres;Password=yourWeak(!)Password"
+  },
+  "OpenApi": {
+    "Endpoint": {
+      "Name": "Catalog.API V1"
+    },
+    "Document": {
+      "Description": "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
+      "Title": "eShop - Catalog HTTP API",
+      "Version": "v1"
+    }
+  }
+}
+```
+
+## 9. Run the application and verify the results
 
 We set the **eShop.AppHost** project as the **StartUp project**
 
