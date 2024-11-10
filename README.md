@@ -416,7 +416,15 @@ app.UseDefaultOpenApi();
 app.Run();
 ```
 
-## 6. Modify the CatalogApi.cs file to introduce the API version
+## 6. Load Nuget package in the 
+
+The **Asp.Versioning.Http** NuGet package is part of the ASP.NET API Versioning project, which provides tools for managing API versioning in ASP.NET applications
+
+This specific package focuses on adding API versioning support for HTTP-based services, such as Web APIs that follow RESTful principles
+
+![image](https://github.com/user-attachments/assets/f8b43b78-bec6-4da4-9762-9dd63bb5d1db)
+
+## 7. Modify the CatalogApi.cs file to introduce the API version
 
 We replace this code: 
 
@@ -430,7 +438,7 @@ with this new code including the ApiVersion:
 var api = app.MapGroup("api/catalog").HasApiVersion(1.0);
 ```
 
-## 7. Run the application and verify the results
+## 8. Run the application and verify the results
 
 
 
